@@ -14,6 +14,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.telluricwalk.echoesandmemories.block.ModBlocks;
+import net.telluricwalk.echoesandmemories.item.ModCreativeModeTabs;
+import net.telluricwalk.echoesandmemories.item.Moditems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -29,6 +32,11 @@ public class Echoesandmemories
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        ModCreativeModeTabs.register(modEventBus);
+
+        Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
@@ -43,6 +51,11 @@ public class Echoesandmemories
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        //Adds item to vanilla creative tab (not custom one)
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(Moditems.SAPPHIRE);
+            event.accept(Moditems.RAW_SAPPHIRE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
