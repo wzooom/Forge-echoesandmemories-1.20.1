@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "echoesandmemories:sapphire_block"
+    }
+  ],
+  "result": {
+    "item": "echoesandmemories:sapphire",
+    "count": 9
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "echoesandmemories:sapphire"
+    }
+  },
+  "result": {
+    "item": "echoesandmemories:sapphire_block"
+  }
+}

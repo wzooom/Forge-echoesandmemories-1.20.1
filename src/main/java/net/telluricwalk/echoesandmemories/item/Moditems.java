@@ -19,6 +19,7 @@ public class Moditems {
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
 
+
     //Registers the deferred register
     public static void register(IEventBus eventbus){
         ITEMS.register(eventbus);
