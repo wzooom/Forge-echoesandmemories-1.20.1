@@ -1,0 +1,21 @@
+{
+  "trype": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition":"minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "echoesandmemories:sapphire_block"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "echoesandmemories:blocks/sapphore_block"
+}
